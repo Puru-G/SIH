@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='Style.css')}}">
+    <link rel="shortcut icon" href="{{url_for('static',filename='background_login.png')}}" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='common.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='index.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='navbar.css')}}">
+    <title>Scholarship Dropdown</title>
+</head>
+<body> 
+   <div id="search">
+
+    
+    <form method="POST">
+        <h2>Search Institution</h2>
+        <div class="content">
+            <div class="input-box">
+                <label for="fname">
+                    First Name(Min 3 Letters)</label>
+                <input type="text" placeholder=" First Name" name="fname" required>
+            </div>
+            <div class="input-box">
+                <label for="caste">Category</label> 
+                <select name="caste" id="cars">
+                <option value="rigatoni">GENERAL</option> 
+                <option value="dave">OBC</option> 
+                <option value="pumpernickel">SC</option> 
+                <option value="reeses">ST</option> 
+            </select>
+  
+
+            </div>
+
+            <div class="input-box">
+                <label for="Father's name">Select District :</label>
+         
+                <select id="cars" name="cars">
+                   <option value="volvo">--</option> 
+                  <option value="volvo">Darbhanga</option>
+                  <option value="saab">Katihar</option>
+                  <option value="fiat">Samastipur</option>
+                  <option value="audi">Muzzafarpur</option>
+                  <option value="volvo">Mumbai</option> 
+                  <option value="volvo">Delhi</option> 
+                  <option value="volvo">Jaipur</option> 
+                  <option value="volvo">Bangalore</option> 
+                  <option value="volvo">Hyderabad</option> 
+                  <option value="volvo">Pune</option> 
+                  <option value="volvo">Gwalior</option> 
+                  <option value="volvo">Indore</option> 
+                  <option value="volvo">Udaipur</option> 
+                  <option value="volvo">Lucknow</option> 
+                  <option value="volvo">Srinagar</option> 
+                  <option value="volvo">Ranchi</option>  
+                  <option value="volvo">Dehradun</option>  
+                  <option value="volvo">Shimla</option> 
+                  <option value="volvo">Jodhpur</option> 
+                  <option value="volvo">Kota</option> 
+                  <option value="volvo">Guwahati</option> 
+                  
+
+                </select>
+            </div>
+            <div class="input-box">
+                <label for="Mother'sname">Institution</label>
+
+                <select id="cars" name="cars">
+                
+                    <option value="saab">--</option>
+                    <option value="">Polyechnic institute</option>
+                    <option value="fiat">Fiat</option>
+                    <option value="audi">LNCT Bhopal</option>
+                    <option value="audi">VIT Bhopal</option>
+                    <option value="audi">Jaypee Institute of engineering</option>
+                    <option value="audi">vallurupalli Nageswara Rao Vignana Jyothi Institute of Engineering and Technology - [VNR VJIET], Hyderabad</option>
+                    <option value="audi">IIT Hyderabad - Indian Institute of Technology - [IITH], Hyderabad</option>
+                    <option value="audi"> Vignana Bharathi Institute of Technology</option>
+                    <option value="audi">Indian Institute of Soil Science (Natural Resource)</option>
+                    <option value="audi">Central Institute of Medicinal and Aromatic Plants (Natural Resource)</option>
+                    <option value="audi"><a href="/contact">If Others(Send Application)</a></option>
+                  </select>
+            </div>
+           
+        <!-- Add more scholarship options as needed -->
+    </select>
+    <!-- <span class="abc"><button type="submit">Request an  Application</button></span>
+    <span class="bcd"><button type="submit" href="/contact">Proceed</button></span> -->
+
+    
+    </div>
+    <div id="button">
+        <div class="abc" id="procced"><button type="submit" >Proceed</button></div>
+        
+        <div class="abc" ><button type="submit" > Request an Application</button></div>
+    
+    </div>
+    </form>
+
+    </div>
+    
+    
+    
+</body>
+</html>

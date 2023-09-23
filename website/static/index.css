@@ -1,0 +1,208 @@
+.home-main{
+    background: url(./back1.png) no-repeat center center/cover;
+    background-size: cover;
+    min-height: 70vh;
+    z-index: -1;
+}
+.main-content{
+    
+    color: rgb(237, 141, 14);
+    position: absolute;
+    top: 55%;
+    left: 40%;
+    transform: translate(-50%,-50%);
+    width: 75%;
+}
+.main-content h1{
+    font-size: 3rem;
+}
+.main-content p{
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+    color: rgb(1, 1, 1);
+    font-weight: bold;
+}
+.gradient-btn{
+    
+    display: grid;
+    place-items: center;
+    text-decoration: none;
+    color: black;
+    background-image: linear-gradient(
+        to right,
+        #eca94c 0%,
+        #b07d1e 51%,
+        #c07d0b 100%
+    );
+    border-radius: 10px;
+    background-size: 200% auto;
+    transition: 0.3s ease-in-out;
+    
+    
+}
+.main-content .gradient-btn{
+    width: 200px;
+    height: 45px;
+    margin-top: 1.5rem;
+    text-transform: uppercase;
+}
+.gradient-btn:hover{
+    background-position: right center;
+}
+@media screen and (max-width:600px) {
+    .main-content h1{
+        font-size: 2.25rem;
+    }
+    .main-content p{
+        font-size: 1rem;
+    }
+    .gradient-btn{
+        width: 175px;
+        height: 40px;
+        font-size: 0.8rem;
+    }
+}
+.about{
+    padding: 1rem;
+    
+}
+.about > h1{
+    font-size: 2.5rem;
+    margin: 1rem 0;
+    
+}
+.about-sub{
+    display: flex;
+    max-width: 90%;    /*me chane karke dekhuga*/
+    margin: 1rem auto;
+    text-align: left;
+    
+}
+.about-sub > img{
+    max-height: 250px;
+    width: 300px;
+    max-width: 90%;
+    animation: animateimage 0.5s linear;
+    border-radius: 15px;
+}
+@keyframes animateimage {
+    from{
+        transform: translateY(-15px);
+        opacity: 0.5;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.about-sub .sub-sub-about{
+    padding: 1rem;
+    animation: animatetext 1s linear;
+}
+@keyframes animatetext {
+    from{
+        transform: translateY(-15px);
+        opacity: 0.5;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.about-sub .sub-sub-about p{
+    font-size: 14px;
+}
+/*our dream waala btn h agar sahi nahi laga tho hata dege*/
+.about-sub .gradient-btn{
+    width: 100px;
+    margin-top: 5px;
+    height: 30px;
+    font-size: 12px;
+}
+@media screen and (max-width:600px) {
+    .about-sub{
+        flex-direction: column;
+    }
+    .about-sub:last-child{
+        flex-direction: column-reverse;
+    }
+}
+.about-companies{
+    max-width: 90%px;
+    width: 90%;
+    background-color: antiquewhite;
+    padding: 1rem 0.5rem;
+    margin: 1rem auto;
+    text-align: center;
+}
+.about-companies h1{
+    font-size: 2rem;
+    color: rgb(186, 110, 9);
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+.about-companies .company-logos{
+    display: flex;
+    justify-content: space-evenly;
+    color: rgb(175, 127, 54);
+    font-size: 2rem;
+    transition: 0.3s ease-in;
+    max-width: 75%;
+    margin: 0px auto;
+
+}
+.about-companies .company-logos .fa:hover{
+    color: black;
+}
+@media screen and (max-width:750px) {
+    .about-companies h1{
+        font-size: 1.5rem;
+    }
+}
+@media screen and (max-width:600px){
+    .about-companies h1{
+        font-size: 1.2rem;
+    }
+    .about-companies .company-logos{
+        font-size: 1rem;
+    }
+}
+
+.contact-form{
+    text-align: center;
+    padding: 1rem;
+}
+.contact-form form{
+    max-width: 500px;
+    margin: 1rem auto;
+    display: flex;
+    flex-direction: column;
+}
+.contact-form form input{
+    height: 40px;
+    padding: 5px 10px;
+    outline: none;
+    margin-bottom: 5px;
+}
+
+.contact-form form input:focus {
+    outline: 1px solid royalblue;
+}
+.contact-form form button{
+    background-color: 
+    #ffaa00 
+    ;
+    height: 40px;
+    color: black;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    margin: 5px 0;
+    transition: 0.3s ease-in-out;
+    
+}
+.contact-form form button:hover{
+   
+    background-color: #be7609;
+}
+

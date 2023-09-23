@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <link
+      href="https://getbootstrap.com/docs/5.3/assets/css/docs.css"
+      rel="stylesheet"
+    />
+  <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    crossorigin="anonymous"
+  />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='common.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='index.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='navbar.css')}}">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+
+   
+    <title>Scholarship website</title>
+</head>
+<body>
+    <section class="home-main">
+        <nav>
+            <div class="brand">
+                <img src="{{url_for('static',filename='background_login.png')}}" alt="icon_of_the_website">  <!--if the icon is not load it shows this-->
+                <a href="/">Scholarship potal</a>
+            </div>
+            <i class="fa fa-bars" aria-hidden="true"></i>
+            <ul> 
+                <i class="fa fa-times" aria-hidden="true"></i>
+                <li><a href="/">Home</a></li>
+                <li><a href="#"> View Scholarships</a></li>
+               
+                
+                <li><a href="#contact">Sign up</a></li>
+                <li><a href="/login">Sign in</a></li>
+                <li><a href="/logout">Logout</a></li>
+                
+            </ul>
+        </nav>
+
+
+        
+    {% with messages = get_flashed_messages(with_categories=true) %} {% if
+        messages %} {% for category, message in messages %} {% if category ==
+        'error' %}
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            {{message}}
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="alert"
+              aria-label="Close"
+            ></button>
+          </div>
+        {% else %}
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            {{message}}
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="alert"
+              aria-label="Close"
+            ></button>
+          </div>
+        {% endif %} {% endfor %} {% endif %} {% endwith %}
+
+
+
+        <div class="main-content">
+            <h1>India's Largest Scholarship Platform</h1>
+            <p>
+                Connecting Scholarship Seekers with Scholarship Providers.
+
+
+            </p>
+            <a href="/login" class="gradient-btn">Apply Now</a>
+        </div>
+    </section>
+    <section class="about">
+        <h1>Our Scholarships</h1>
+            <div class="about-sub">
+                <img src="{{url_for('static',filename='e1.png')}}" alt="our_dream_image">
+                <div class="sub-sub-about">
+                    <h2> Engineering Students</h2><!-- Change form here-->
+                    <p>
+                        Securing a scholarship as an engineering student can be a great way to alleviate the financial burden of your education. Scholarships are typically awarded based on academic achievement, financial need, extracurricular involvement, or a combination of these factors. 
+                    </p>
+                    <a href="/search" class="gradient-btn">Apply Now</a>
+                </div>
+            </div>
+            <div class="about-sub">
+                
+                <div class="sub-sub-about">
+                    <h2> 12 Pass out Students</h2>
+                    <p>Scholarships for 12th pass out students are available to help them pursue higher education and achieve their academic goals    
+                    </p>
+                    <a href="/login" class="gradient-btn">Get Started</a>
+                </div>
+                <img src="{{url_for('static',filename='12th.jpg')}}" alt="our_dream_image">
+            </div>
+            
+            <div class="about-sub">
+                <img src="{{url_for('static',filename='Medical.jpg')}}" alt="our_dream_image">
+                <div class="sub-sub-about">
+                    <h2> Madical  Students</h2>
+                    <p>
+                        Scholarships for medical students can be highly competitive due to the significant cost of medical education. However, numerous scholarships and financial aid options are available to help aspiring medical professionals pursue their studies.
+                    </p>
+                    <a href="/login" class="gradient-btn">Get Started</a>
+                </div>
+               
+            </div>
+
+            <div class="about-sub">
+                
+                <div class="sub-sub-about">
+                    <h2>10 Pass out Students</h2>
+                    <p>
+                        Post-matric scholarships are financial aid programs designed to support students pursuing education after completing their matriculation (usually 10th standard or equivalent) or higher secondary education (12th standard or equivalent). These scholarships are typically available at the college or university level and are meant to help students cover the cost of tuition, books, accommodation, and other educational expenses
+                    </p>
+                    <a href="/login.html" class="gradient-btn">Get Started</a>
+                </div>
+                <img src="{{url_for('static',filename='10th.jpg')}}" alt="our_dream_image">
+            </div>
+            <div class="about-companies">
+                <h1> Click here for Privates Companies <span>Scholarships </span>.</h1>
+                <div class="company-logos">
+                    <i class="fa fa-google"></i>
+                    <i class="fa fa-facebook"></i>
+                    <i class="fa fa-twitter"></i>
+                    <i class="fa fa-instagram"></i>
+                    <i class="fa fa-linkedin"></i>
+
+                </div>
+            </div>
+    </section>
+
+
+
+
+    
+    <section class="contact-form" id="contact">
+        <h1>Sign up form</h1>
+        <form method="POST">
+            <input type="text" name="fname" placeholder="First Name" required>
+            <input type="text" name="mname" placeholder="Middle Name" >
+            <input type="text" name="lname" placeholder="Last Name" required>
+            <input type="email" name="email" placeholder="Email address" required>
+            <input type="number" name="phone" placeholder="Phone Number" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="password" name="confirm_password" placeholder="Confrim Password" required>
+            
+            <button type="submit">Sign up</button>
+        </form>
+    </section>
+    <div class="copyright">
+        &copy; All rights reserved by Phoenix
+    </div>
+    <script src="./js/navbar.js"></script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{{url_for('static',filename='background_login.png')}}" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='common.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='contact.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='navbar.css')}}">
+    <title>Contact us</title>
+</head>
+<body>
+    <section class="contact-main">
+        <nav>
+            <div class="brand">
+                <img src="{{url_for('static',filename='background_login.png')}}" alt="icon_of_the_website">  <!--if the icon is not load it shows this-->
+                <a href="/">Scholarship potal</a>
+            </div>
+            <i class="fa fa-bars" aria-hidden="true"></i>
+            <ul> 
+                <i class="fa fa-times" aria-hidden="true"></i>
+                <li><a href="/">Home</a></li>
+                <li><a href="#">View Scholarships</a></li>
+                <li><a href="/login">Sign in</a></li>
+                <li><a href="/logout">Logout</a></li>
+
+                
+            </ul>
+        </nav>
+        <div class="contact-main-text">
+            <h3>
+                Write Your Application
+            </h3>
+            <h1>
+                Contact Your College/University
+            </h1>
+            <p>
+                We are here to help and answer any question you might have. We look forward to hearing from you 🙂
+            </p>
+            <a href="#contact">Click here</a>
+        </div>
+
+    </section>
+    <section class="contact-form" id="contact">
+        <h1>Contact Your College/University Directly</h1>
+        <form action = "/contact" method="POST" enctype="multipart/form-data">
+            <input type="text" name="name" placeholder="Name" required>
+            <input type="text" name="gender" placeholder="Gender" >
+            <input type="date" name="dob" placeholder="Date of Birth" required>
+            <input type="email" name="email" placeholder="Email address" required>
+            <input type="number" name="phone" placeholder="Phone Number" required>
+            <input type="text" name="College" placeholder="College/University" required>
+            <input type="text" name="semester" placeholder="Semester/Year" required>
+            <input type="text" name="city" placeholder="City" required>
+            <input type="text" name="state" placeholder="State" required>
+            <input type="text" name="lname" placeholder="Domicile" required>
+            <input type="file" name="domicile" placeholder="Domicile Certificate" required>
+            <button type="submit">Submit</button>
+        </form>
+        
+    </section>
+    <div class="copyright">
+        &copy; All rights reserved by Phoenix
+    </div>
+    <script src="./js/navbar.js"></script>
+</body>
+</html>

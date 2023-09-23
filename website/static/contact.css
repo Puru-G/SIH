@@ -1,0 +1,140 @@
+.contact-main{
+    background: url(./background_for_contact2_page.png);
+    background-size: cover;
+    color: red;
+    min-height: 100vh;
+}
+.contact-main-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 1rem;
+    min-width: 75%;
+    text-align: center;
+}
+.contact-main-text h1{
+    font-size: 4rem;
+}
+.contact-main-text p{
+    font-size: 1.5rem;
+    margin: 1rem 0 3rem 0;
+    
+}
+.contact-main-text h3{
+    font-size: 2rem;
+}
+.contact-main-text a{
+    text-decoration: none;
+    color: brown;
+    padding: 10px 25px;
+    border: 1px solid rgb(228, 189, 105);
+    position: relative;
+    
+}
+.contact-main-text a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(228, 189, 105);
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    
+    transform: scaleX(0);
+    transition: 0.2s ease-out;
+}
+.contact-main-text a:hover::before{
+    transform: scaleX(1);
+}
+@media screen and (max-width: 600px) {
+    .contact-main-text{
+        width: 90%;
+    }
+    .contact-main-text h1{
+        font-size: 2rem;
+    }
+    .contact-main-text p{
+        font-size: 1rem;
+    }
+    .contact-main-text h3{
+        font-size: 1.3rem;
+    }
+}
+.contact-form{
+    text-align: center;
+    padding: 1rem;
+}
+.contact-form form{
+    max-width: 500px;
+    margin: 1rem auto;
+    display: flex;
+    flex-direction: column;
+}
+.contact-form form input{
+    height: 40px;
+    padding: 5px 10px;
+    outline: none;
+    margin-bottom: 5px;
+}
+.contact-form form textarea{
+    padding: 5px 10px;
+    outline: none;
+}
+.contact-form form input:focus , .contact-form form textarea:focus{
+    outline: 1px solid royalblue;
+}
+.contact-form form button{
+    background-color: rgb(228, 189, 105);
+    height: 40px;
+    color: black;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    margin: 5px 0;
+    transition: 0.3s ease-in-out;
+    
+}
+.contact-form form button:hover{
+   
+    background-color: rgb(233, 163, 11);
+}
+.social-medias{
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+    
+}
+.social-medias ul li{
+    list-style: none;
+    
+}
+.social-medias ul li a{
+    text-decoration: none;
+    color: #555;
+    
+}
+.social-medias ul li a:hover{
+    color: #000;
+}
+.social-medias ul li a i{
+    color: #000;
+    margin-right: 5px;
+    
+}
+.social-medias ul li a:hover i{
+    color: rgb(224, 187, 102);
+}
+.social-medias h3{
+    background-image: url(../images/background_for_contact_page.png);
+    color: black;
+    border-radius: 5px;
+    text-align: center;
+}
+
+
+
+
+
+
