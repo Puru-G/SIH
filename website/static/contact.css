@@ -1,4 +1,9 @@
-.contact-main{
+section{
+    min-height: 95vh;
+    background-image: url(./back1.png);
+   
+    background-size: cover;
+}.contact-main{
     background: url(./background_for_contact2_page.png);
     background-size: cover;
     color: red;

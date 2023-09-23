@@ -45,3 +45,9 @@ def home():
             return redirect(url_for('views.home'))
 
     return render_template("home.html")
+
+@views.route('/signup',methods=['GET','POST'])
+def signup():
+    if(request.method == 'POST'):
+        return render_template('signup.html')
+    return render_template('signup.html')
