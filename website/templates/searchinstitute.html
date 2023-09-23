@@ -26,7 +26,7 @@
             </div>
             <div class="input-box">
                 <label for="caste">Category</label> 
-                <select name="caste" id="cars">
+                <select name="caste" id="caste">
                 <option value="rigatoni">GENERAL</option> 
                 <option value="dave">OBC</option> 
                 <option value="pumpernickel">SC</option> 
@@ -37,59 +37,132 @@
             </div>
 
             <div class="input-box">
-                <label for="Father's name">Select District :</label>
+                <label for="state">Select State :</label>
          
-                <select id="cars" name="cars">
-                   <option value="volvo">--</option> 
-                  <option value="volvo">Darbhanga</option>
-                  <option value="saab">Katihar</option>
-                  <option value="fiat">Samastipur</option>
-                  <option value="audi">Muzzafarpur</option>
-                  <option value="volvo">Mumbai</option> 
-                  <option value="volvo">Delhi</option> 
-                  <option value="volvo">Jaipur</option> 
-                  <option value="volvo">Bangalore</option> 
-                  <option value="volvo">Hyderabad</option> 
-                  <option value="volvo">Pune</option> 
-                  <option value="volvo">Gwalior</option> 
-                  <option value="volvo">Indore</option> 
-                  <option value="volvo">Udaipur</option> 
-                  <option value="volvo">Lucknow</option> 
-                  <option value="volvo">Srinagar</option> 
-                  <option value="volvo">Ranchi</option>  
-                  <option value="volvo">Dehradun</option>  
-                  <option value="volvo">Shimla</option> 
-                  <option value="volvo">Jodhpur</option> 
-                  <option value="volvo">Kota</option> 
-                  <option value="volvo">Guwahati</option> 
+                <select id="state" name="state" onchange="check(this.id,'col')">
+                   <option value="state">States</option> 
+                  <option value="Andhra_pradesh">Andhra Pradesh</option>
+                  <option value="Arunachal_pradesh">Arunachal Pradesh</option>
+                  <option value="Assam">Assam</option>
+                  <option value="Bihar">Bihar</option>
+                  <option value="Chattisgarh">Chhattishgarh</option> 
+                  <option value="Goa">Goa</option> 
+                  <option value="Gujarat">Gujrat</option> 
+                  <option value="Harayana">Haryana</option> 
+                  <option value="Himachal_Pradesh">Himanchal Pradesh</option> 
+                  <option value="Jammu_and_Kashmir">Jammu and Kashmir</option> 
+                  <option value="Jharkhand">Jharkhand</option> 
+                  <option value="Karnataka">Karnataka</option> 
+                  <option value="Kerala">Kerala</option> 
+                  <option value="Madhya_pradesh">Madhya Pradesh</option> 
+                  <option value="Maharashtra">Maharashtra</option> 
+                  <option value="Manipur">Manipur</option>  
+                  <option value="Meghalaya">Meghalaya</option>  
+                  <option value="Mizoram">Mizoram</option> 
+                  <option value="Nagaland">Nagaland</option> 
+                  <option value="Orrisa">Orissa</option> 
+                  <option value="Punjab">Punjab</option>
+                  <option value="Rajasthan">Rajasthan</option>
+                  <option value="Sikkim">Sikkim</option>
+                  <option value="Tamil_Nadu">Tamil Nadu</option>
+                  <option value="Telanagana">Telangana</option>
+                  <option value="Tripura">Tripura</option>
+                  <option value="Uttar_pradesh">Uttar Pradesh</option>
+                  <option value="Uttarakhand">Uttarakhand</option>
+                  <option value="West_bengal">West Bengal</option>
+
+
+                   
                   
 
                 </select>
             </div>
             <div class="input-box">
-                <label for="Mother'sname">Institution</label>
+                <label for="col">Institution</label>
 
-                <select id="cars" name="cars">
+                <select id="col" name="col">
                 
-                    <option value="saab">--</option>
-                    <option value="">Polyechnic institute</option>
-                    <option value="fiat">Fiat</option>
-                    <option value="audi">LNCT Bhopal</option>
-                    <option value="audi">VIT Bhopal</option>
-                    <option value="audi">Jaypee Institute of engineering</option>
-                    <option value="audi">vallurupalli Nageswara Rao Vignana Jyothi Institute of Engineering and Technology - [VNR VJIET], Hyderabad</option>
-                    <option value="audi">IIT Hyderabad - Indian Institute of Technology - [IITH], Hyderabad</option>
-                    <option value="audi"> Vignana Bharathi Institute of Technology</option>
-                    <option value="audi">Indian Institute of Soil Science (Natural Resource)</option>
-                    <option value="audi">Central Institute of Medicinal and Aromatic Plants (Natural Resource)</option>
-                    <option value="audi"><a href="/contact">If Others(Send Application)</a></option>
+                    <option value="college">Colleges</option>
+                    <!-- <option value="">KREA University, Sri City</option>
+                    <option value="">Andhra Loyola College, Vijaywada</option>
+                    <option value="">KL University, Guntur</option>
+                    <option value="">GITAM, Visakhapatnam</option>
+
+                    <option value="">Arunachal University of Studies</option>
+                    <option value="">Govt College, Yachuli</option>
+                    <option value="">Govt Degree College, Doimukh</option>
+                    <option value="">Don Bosco College, Itanagar</option>
+
+                    <option value="">IIT Guwahati</option>
+                    <option value="">Cotton University, Guwahati</option>
+                    <option value="">Tezpur university, Tezpur</option>
+                    <option value="">Dilbrugarh University, Dilbrugarh</option>
+
+                    <option value="">IIIT Bhagalpur</option>
+                    <option value="">Purnea University, Purnia</option>
+                    <option value="">Patliputra University, Patna</option>
+                    <option value="">Munger University, Munger</option>
+
+                    <option value="">KK Modi University, Durg</option>
+                    <option value="">NIT Raipur</option>
+                    <option value="">OP Jindal University, Rajgarh</option>
+                    <option value="">Kalinga University, Raipur</option>
+
+                    <option value="">IHM Goa</option>
+                    <option value="">Goa Institute of Management</option>
+                    <option value="">NIT Goa</option>
+                    <option value="">Goa College of Pharmecy</option>
+
+                    <option value="">Parul University, Vadodra</option>
+                    <option value="">GSFC University, Vadodra</option>
+                    <option value="">Raj University, Ahmedabad</option>
+                    <option value="">IIT Ghandhinagar</option>
+
+                    <option value="">NIT Kurushetra</option>
+                    <option value="">Amity University, Gurgram</option>
+                    <option value="">Chandigarh University</option>
+                    <option value="">IIIT Sonepat</option>
+
+                    <option value="">IIT Mandi</option>
+                    <option value="">IIM Sirmaur</option>
+                    <option value="">NIT Hamirpur</option>
+                    <option value="">RPGMC Kangra</option>
+
+                    <option value="">IIT Jammu</option>
+                    <option value="">NIT ShriNagar</option>
+                    <option value="">YCET Jammu</option>
+
+                    <option value="">BIT Mesra</option>
+
+                    <option value="">IIIT Banglore</option>
+
+                    <option value="">NIT Trichy</option>
+
+                    <option value="">Jaypee University of Engineering and Technology, Guna</option>
+
+                    <option value="">NMIMS Mumbai</option>
+
+                    <option value="">Manipur University</option>
+
+                    <option value="">USTM University, Ri Bhoi</option>
+
+                    <option value="">Mishoram University,aizwal</option>
+
+                    <option value="">Nagaland University, Lumami</option>
+
+                    <option value="">Kalinga University, Bhubaneswar</option>
+
+                    <option value="">LPU, Phagwara</option>
+
+                    <option value="">LNMIIT Jaipur</option> -->
+
+                    <!-- <option value="audi" ><a href="/contact">If Others(Send Application)</a></option> -->
                   </select>
             </div>
            
         <!-- Add more scholarship options as needed -->
     </select>
-    <!-- <span class="abc"><button type="submit">Request an  Application</button></span>
-    <span class="bcd"><button type="submit" href="/contact">Proceed</button></span> -->
+    
 
     
     </div>
@@ -104,6 +177,51 @@
     </div>
     
     
-    
+    <script>
+        function check(state_id , colleges_id){
+            var state = document.getElementById(state_id);
+            var college = document.getElementById(colleges_id);
+            
+            college.innerHTML = "";
+
+            if(state.value == "Andhra_pradesh"){
+                var option=['KREA|KREA University, Sri City','Loyola|Andhra Loyola College, Vijaywada','KL|KL University, Guntur','GITAM|GITAM, Visakhapatnam'];
+            }
+
+            else if(state.value == "Arunachal_pradesh"){
+                var option=['AUOS|Arunachal University of Studies, Sri City','GCY|Govt College, Yachuli','GDCD|Govt Degree College, Doimukh','DBCI|Don Bosco College, Itanagar'];
+            }
+            else if(state.value == "Assam"){
+                var option=['IITG|IIT Guwahati, Sri City','CUG|Cotton University, Guwahati','TUT|Tezpur university, Tezpur','DUD|Dilbrugarh University, Dilbrugarh'];
+            }
+            else if(state.value == "Bihar"){
+                var option=['IIITB|IIIT Bhagalpur','PUP|Purnea University, Purnia','PAUP|Patliputra University, Patna','MUM|Munger University, Munger'];
+            }
+            else if(state.value == "Chattisgarh"){
+                var option=['KKUD|KK Modi University, Durg','NITR|NIT Raipur','OJUR|OP Jindal University, Rajgarh','KUR|Kalinga University, Raipur'];
+            }
+
+            for(var op in option){
+                
+                var pair = option[op].split("|");
+                var newoption = document.createElement("option");
+
+                newoption.value = pair[0];
+                newoption.innerHTML=pair[1];
+                college.options.add(newoption);
+                
+            }
+            var newoption_2 = document.createElement("option");
+
+            newoption_2.value = "others";
+            newoption_2.onclick=redirect();
+            newoption_2.innerHTML="If Others(Send Application)";
+            college.options.add(newoption_2);
+
+        }
+        function redirect(){
+            window.location.href = "https://www.google.com/";
+        }
+    </script>
 </body>
 </html>
