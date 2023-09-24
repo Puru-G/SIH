@@ -87,7 +87,7 @@ def contact():
         gender =  request.form.get('gender')
         dob =  datetime.strptime(request.form.get('dob'),'%Y-%M-%d').date()
         email=  request.form.get('email')
-        phone =  request.form.get('phone')
+        phone =  str(request.form.get('phone'))
         college_mail =  request.form.get('College')
         eno = request.form.get('eno')
         sem = request.form.get('semester')
@@ -103,7 +103,7 @@ def contact():
             flash('Name contains number!!',category='error')
         elif(len(email)<=10):
             flash('Email is not valid!!',category='error')
-        elif(len(str(phone))!=10):
+        elif(len(phone)!=10):
             flash('Enter valid phone number!!',category='error')
         else:
             new_application = Application(name=name,gender=gender,dob=dob,email=email,phone=phone,college_mail=college_mail,eno=eno,sem=sem,city=city,state=state,domicile_certificate=domicile_certificate.read())
