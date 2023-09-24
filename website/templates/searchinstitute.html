@@ -166,6 +166,7 @@
 
     
     </div>
+    <input type="text " name="college_name" id="college_name" style="visibility: hidden;">
     <div id="button">
         <div class="abc" id="procced"><button type="submit" >Proceed</button></div>
         
@@ -224,9 +225,16 @@
             console.log(college_change_id_value.value)
             if(college_change_id_value.value == "others"){
                 console.log("inside if")
-                window.location.href = "https://www.google.com/";
+                // window.location.href = "https://www.google.com/";
+                document.getElementById("college_name").style.visibility="visible";
             }
+            else{
+                document.getElementById("college_name").style.visibility="hidden";
+            }
+            
         }
+        
+    
     </script>
 </body>
 </html>
