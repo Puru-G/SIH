@@ -39,8 +39,6 @@
             <ul> 
                 <i class="fa fa-times" aria-hidden="true"></i>
                 <li><a href="/">Home</a></li>
-                <li><a href="#">View Scholarships</a></li>
-                <li><a href="/login">Sign in</a></li>
                 <li><a href="/logout">Logout</a></li>
 
                 
@@ -90,10 +88,10 @@
         <form action = "/contact" method="POST" enctype="multipart/form-data">
             <input type="text" name="name" placeholder="Name" required>
             <select class="gen" name="gender">
-                <option value=""> Select Gender </option>
-                <option value="M"> Male</option> 
-                <option value="F"> Female</option>
-                <option value="O"> Other</option>
+                <option value="">  Select Gender </option>
+                <option value="Male"> Male</option> 
+                <option value="Female"> Female</option>
+                <option value="Others"> Other</option>
             </select>
             <input type="date" name="dob" placeholder="Date of Birth" required>
             <input type="email" name="email" placeholder="Email address" required>
@@ -101,9 +99,8 @@
             <input type="email" name="College" placeholder="College/University Email" required>
             <input type="text" name="eno" placeholder="Enter Enorlment Number" required>
             <input type="text" name="semester" placeholder="Semester/Year" required>
-            <input type="text" name="city" placeholder="City" required>
             <input type="text" name="state" placeholder="State" required>
-            <input type="text" name="lname" placeholder="Domicile" required>
+            <input type="text" name="city" placeholder="City/Town" required>
             <input type="file" name="domicile" placeholder="Domicile Certificate" required>
             <button type="submit">Submit</button>
         </form>
