@@ -11,10 +11,49 @@ from datetime import datetime
 app=Mail_function()
 auth = Blueprint('auth', __name__)
 
+@auth.route('/signup',methods=['GET','POST'])
+def signup():
+    if request.method=='POST':
+
+        first_name=request.form.get('fname')
+        last_name=request.form.get('lname')
+        middle_name=request.form.get('mname')
+        email=request.form.get('email')
+        phone=request.form.get('phone')
+        password=request.form.get('password')
+        confirm_password=request.form.get('confirm_password')
+
+        def check(var):
+            return any(char.isdigit() for char in var)
+        
+
+        user=User.query.filter_by(email=email).first()
+        if user:
+            flash('Email Already Exists!!',category='error')
+        elif(check(first_name) or check(last_name) or check(middle_name)):
+            flash('Name contains number!!',category='error')
+        elif(len(email)<=10):
+            flash('Email is not valid!!',category='error')
+        elif(len(str(phone))!=10):
+            flash('Enter valid phone number!!',category='error')
+        elif(len(password)<8):
+            flash('Length of password must be between 8 and 15!!',category='error')
+        elif(confirm_password!=password):
+            flash('Password Does not match!!',category='error')
+        else:
+            new_user=User(email=email,first_name=first_name,middle_name=middle_name,last_name=last_name,phone=phone,password=generate_password_hash(password , method='sha256'))
+            db.session.add(new_user)
+            db.session.commit()
+            login_user(new_user,remember=True)
+            flash('Account Created!!',category='Success')
+            return redirect(url_for('views.home'))
+    return render_template('signup.html')
 
 @auth.route('/logout',methods=['GET','POST'])
+@login_required
 def logout():
-    return redirect(url_for('views.home'))
+    logout_user()
+    return redirect(url_for('auth.login'))
 
 @auth.route('/login',methods=['GET','POST'])
 def login():
@@ -27,6 +66,7 @@ def login():
             if check_password_hash(user.password,password):
 
                 flash('Logged in successfully!',category='success')
+                login_user(user,remember=True)
                 return redirect(url_for('views.home'))
             else:
                 flash('Incorrect password,try again.', category='error')

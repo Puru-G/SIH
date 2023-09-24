@@ -33,9 +33,6 @@
             <ul> 
                 <i class="fa fa-times" aria-hidden="true"></i>
                 <li><a href="/">Home</a></li>
-                <li><a href="#">View Scholarships</a></li>
-                <li><a href="/contact">Send Application</a></li>
-                
                 <li><a href="/login">Sign in</a></li>
 
                 
@@ -69,41 +66,41 @@
 
         <div class="signup">
             <h1>Sign up</h1>
-            <form  method="POST">
+            <form  method="POST" action="/signup">
                 <div class="form-item">
-                    <label for="name">First Name</label>
-                </br>
-                    <input type="name" id="name" name="name" required>
+                    <label for="fname">First Name</label>
+                <br>
+                    <input type="name" id="fname" name="fname" required>
                 </div>
                 <div class="form-item">
-                    <label for="name">Middle Name</label>
-                </br>
-                    <input type="name" id="name" name="name" required>
+                    <label for="mname">Middle Name</label>
+                <br>
+                    <input type="name" id="mname" name="mname" >
                 </div>
                 <div class="form-item">
-                    <label for="name">Last Name</label>
-                </br>
-                    <input type="name" id="name" name="name" required>
+                    <label for="lname">Last Name</label>
+                <br>
+                    <input type="name" id="lname" name="lname" required>
                 </div>
                 <div class="form-item">
                     <label for="email">Email address</label>
-                </br>
+                <br>
                     <input type="email" id="email" name="email" required>
                 </div>
                 <div class="form-item">
-                    <label for="email">Phone Number</label>
-                </br>
-                    <input type="email" id="email" name="email" required>
+                    <label for="phone">Phone Number</label>
+                <br>
+                    <input type="number" id="phone" name="phone" required>
                 </div>
                 <div class="form-item">
                     <label for="password">Enter Password</label>
-                </br>
+                <br>
                     <input type="password" id="password" name="password" required>
                 </div>
                 <div class="form-item">
-                    <label for="password">Confirm Password</label>
-                </br>
-                    <input type="password" id="password" name="password" required>
+                    <label for="confirm_password">Confirm Password</label>
+                <br>
+                    <input type="password" id="confirm_password" name="confirm_password" required>
                 </div>
                 
                 <button type="submit">Sign up</button>
