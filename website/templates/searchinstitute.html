@@ -80,7 +80,7 @@
             <div class="input-box">
                 <label for="col">Institution</label>
 
-                <select id="col" name="col">
+                <select id="col" name="col" onchange="redirect(this.id)">
                 
                     <option value="college">Colleges</option>
                     <!-- <option value="">KREA University, Sri City</option>
@@ -156,7 +156,7 @@
 
                     <option value="">LNMIIT Jaipur</option> -->
 
-                    <!-- <option value="audi" ><a href="/contact">If Others(Send Application)</a></option> -->
+                    <option value="audi" >If Others(Send Application)</option>
                   </select>
             </div>
            
@@ -214,13 +214,18 @@
             var newoption_2 = document.createElement("option");
 
             newoption_2.value = "others";
-            newoption_2.onclick=redirect();
             newoption_2.innerHTML="If Others(Send Application)";
             college.options.add(newoption_2);
 
         }
-        function redirect(){
-            window.location.href = "https://www.google.com/";
+        function redirect(college_change_id){
+            console.log("inside redirect");
+            college_change_id_value = document.getElementById(college_change_id);
+            console.log(college_change_id_value.value)
+            if(college_change_id_value.value == "others"){
+                console.log("inside if")
+                window.location.href = "https://www.google.com/";
+            }
         }
     </script>
 </body>
