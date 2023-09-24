@@ -95,10 +95,20 @@ def contact():
         state =  request.form.get('state')
         domicile_certificate = request.files['domicile']
         domicile_filename = domicile_certificate.filename
-
-        new_application = Application(name=name,gender=gender,dob=dob,email=email,phone=phone,college=college,eno=eno,sem=sem,city=city,state=state,domicile_certificate=domicile_certificate.read())
-        db.session.add(new_application)
-        db.session.commit()
+        
+        def check(var):
+            return any(char.isdigit() for char in var)
+        
+        if(check(name)):
+            flash('Name contains number!!',category='error')
+        elif(len(email)<=10):
+            flash('Email is not valid!!',category='error')
+        elif(len(str(phone))!=10):
+            flash('Enter valid phone number!!',category='error')
+        else:
+            new_application = Application(name=name,gender=gender,dob=dob,email=email,phone=phone,college=college,eno=eno,sem=sem,city=city,state=state,domicile_certificate=domicile_certificate.read())
+            db.session.add(new_application)
+            db.session.commit()
 
         
 
