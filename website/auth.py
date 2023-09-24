@@ -109,17 +109,15 @@ def contact():
             new_application = Application(name=name,gender=gender,dob=dob,email=email,phone=phone,college=college,eno=eno,sem=sem,city=city,state=state,domicile_certificate=domicile_certificate.read())
             db.session.add(new_application)
             db.session.commit()
-
+            mail=Mail(app)
+            msg=Message(subject="CONGRATULATIONS It WORKS!!!!!!",sender='phoenix.12456789@gmail.com',recipients=['rohan111bhargava@gmail.com'])
+            msg.body ="Name : "+name+"\n"+"Gender : "+gender+"\n"+"DOB : "+str(dob)+"\n"+"Gmail : "+email+"\n"+"Phone : "+phone+"\n"+"College : "+college+"\n"+"EnormentNo: "+eno+"\n"+"Semester: "+sem+"\n"+"State : "+state+"\n"+"City : "+city
+            
+            msg.attach("File",domicile_filename+"/pdf","pdf")
+            mail.send(msg)
+            return "added to database"
         
 
-        mail=Mail(app)
-        msg=Message(subject="CONGRATULATIONS It WORKS!!!!!!",sender='phoenix.12456789@gmail.com',recipients=['rohan111bhargava@gmail.com'])
-        msg.body ="Name : "+name+"\n"+"Gender : "+gender+"\n"+"DOB : "+str(dob)+"\n"+"Gmail : "+email+"\n"+"Phone : "+phone+"\n"+"College : "+college+"\n"+"EnormentNo: "+eno+"\n"+"Semester: "+sem+"\n"+"State : "+state+"\n"+"City : "+city
-        
-        msg.attach("File",domicile_filename+"/pdf","pdf")
-        mail.send(msg)
-
-        return "added to database"
     return render_template('contact.html')
 
 @auth.route('/search',methods=['GET','POST'])

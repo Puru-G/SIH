@@ -137,7 +137,10 @@ section{
     border-radius: 5px;
     text-align: center;
 }
-
+.gen{
+    height: 40px;
+    margin: 5px 0;
+}
 
 
 
