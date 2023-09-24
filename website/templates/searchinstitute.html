@@ -167,6 +167,7 @@
     
     </div>
     <input type="text " name="college_name" id="college_name" style="visibility: hidden;">
+    <input type="file" name="college_name" id="document" style="visibility: hidden;">
     <div id="button">
         <div class="abc" id="procced"><button type="submit" >Proceed</button></div>
         
@@ -227,9 +228,11 @@
                 console.log("inside if")
                 // window.location.href = "https://www.google.com/";
                 document.getElementById("college_name").style.visibility="visible";
+                document.getElementById("document").style.visibility="visible";
             }
             else{
                 document.getElementById("college_name").style.visibility="hidden";
+                document.getElementById("document").style.visibility="hidden";
             }
             
         }
