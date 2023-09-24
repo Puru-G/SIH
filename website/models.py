@@ -11,7 +11,7 @@ class Application(db.Model, UserMixin):
     dob = db.Column(db.Date())
     email = db.Column(db.String(150))
     phone = db.Column(db.Integer)
-    college = db.Column(db.String(150))
+    college_mail = db.Column(db.String(150))
     eno = db.Column(db.String(15))
     sem  = db.Column(db.String(15))
     city = db.Column(db.String(150))

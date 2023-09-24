@@ -88,7 +88,7 @@ def contact():
         dob =  datetime.strptime(request.form.get('dob'),'%Y-%M-%d').date()
         email=  request.form.get('email')
         phone =  request.form.get('phone')
-        college =  request.form.get('College')
+        college_mail =  request.form.get('College')
         eno = request.form.get('eno')
         sem = request.form.get('semester')
         city =  request.form.get('city')
@@ -106,16 +106,16 @@ def contact():
         elif(len(str(phone))!=10):
             flash('Enter valid phone number!!',category='error')
         else:
-            new_application = Application(name=name,gender=gender,dob=dob,email=email,phone=phone,college=college,eno=eno,sem=sem,city=city,state=state,domicile_certificate=domicile_certificate.read())
+            new_application = Application(name=name,gender=gender,dob=dob,email=email,phone=phone,college_mail=college_mail,eno=eno,sem=sem,city=city,state=state,domicile_certificate=domicile_certificate.read())
             db.session.add(new_application)
             db.session.commit()
             mail=Mail(app)
             msg=Message(subject="CONGRATULATIONS It WORKS!!!!!!",sender='phoenix.12456789@gmail.com',recipients=['rohan111bhargava@gmail.com'])
-            msg.body ="Name : "+name+"\n"+"Gender : "+gender+"\n"+"DOB : "+str(dob)+"\n"+"Gmail : "+email+"\n"+"Phone : "+phone+"\n"+"College : "+college+"\n"+"EnormentNo: "+eno+"\n"+"Semester: "+sem+"\n"+"State : "+state+"\n"+"City : "+city
+            msg.body ="Name : "+name+"\n"+"Gender : "+gender+"\n"+"DOB : "+str(dob)+"\n"+"Gmail : "+email+"\n"+"Phone : "+phone+"\n"+"College : "+college_mail+"\n"+"EnormentNo: "+eno+"\n"+"Semester: "+sem+"\n"+"State : "+state+"\n"+"City : "+city
             
             msg.attach("File",domicile_filename+"/pdf","pdf")
             mail.send(msg)
-            return "added to database"
+            return render_template('under_process.html')
         
 
     return render_template('contact.html')
