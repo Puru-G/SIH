@@ -6,12 +6,15 @@
 }
 
 body{
-    display: flex;
+   
     justify-content: center;
     align-items: center;
     height: 100vh;
+   display:block;
 
-   background: url(./back1.png);
+    
+
+  background: url(./back1.png);
    background-size: cover;
 }
 .container{
@@ -35,6 +38,12 @@ body{
     height:4.0rem;
     border-radius: 0.5rem;
 }
+#no_code{
+    width:80%;
+    height:4.0rem;
+    border-radius: 0.5rem;
+    visibility:hidden;
+}
 h2{
     font-size: 2.6rem;
     font-weight:bold;
@@ -52,6 +61,7 @@ h2{
 
 }
 #search{
+    padding-top: 13rem;
     padding-left: 3.0rem;
 }
 .input-box{
@@ -59,12 +69,14 @@ h2{
     flex-wrap: wrap;
     width: 50%;
     padding-bottom: 1.5rem;
+
 }
 /* .input-box:nth-child(2n){
     /*justify-content: end;}*/
 .input-box label, .gender-title{
     width:95%;
     color:#f6a607 ;
+    font-size:2rem;
     font-weight: bold;
     margin:0.5rem 0;
    
@@ -166,14 +178,33 @@ h2{
     transition:0.3%;
    
 }
-#button{
-    display: flex;
+.abc_2 button{
+  
     align-items: center;
-    margin-left: 83vh;
-    
+    width: 100%;
+    margin-top: 1.0rem;
+    padding: 1.0rem;
+    display: block;
+    font-size: 2.0rem;
+    color:#fff;
+    border:none;
+    border-radius: 0.5rem;
+    background-color: #f6a607;
+    cursor:pointer;
+    transition:0.3%;
+   
+}
+#button{
+    display: block;
+    align-items: center;
+    justify-content: center;
+    margin-left: 50vh;
+    width: 30%;
 }
 #procced{
-    margin-right: 52vh;
+    width: 60%;
+    margin-right: 30vh;
+    margin-left: 8vh;
 }
 .abc button{
   
@@ -203,6 +234,36 @@ html{
     font-size: 62.5%;
 }
 
+
+    
+
+.drop-container {
+   
+    padding: 10px;
+    
+    
+    color: #444;
+    cursor: pointer;
+    width:5%;
+    
+   
+  }
+  
+  .drop-container:hover {
+  
+    border-color:rgb(202, 139, 2);
+  }
+  
+  .drop-container:hover .drop-title {
+    color: #222;
+  }
+  .Uploaddocs{
+    display:flex;
+
+  }
+  #no_code{
+    font-size: 18px;
+  }
    
    
   

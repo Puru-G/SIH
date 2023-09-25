@@ -3,6 +3,7 @@ section{
     background-image: url(./back1.png);
    
     background-size: cover;
+    
 }
 .signup{
     position: absolute;
@@ -11,21 +12,27 @@ section{
     transform: translate(-50%,-50%);
     background: rgba(255, 255, 255, 0.5);
     
+    
     width: 45rem;
-    height:61rem;
+    height:63rem;
     backdrop-filter: blur(0.5rem);
     -webkit-backdrop-filter: blur(0.5rem);
     border-radius: 1rem;
     padding: 0.5rem;
+    margin-top: 1.5rem;
+   
 }
 .signup h1{
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     text-align: center;
 }
 .signup form{
     margin-top: 2.5rem;
+    
 }
+
 .signup .form-item{
+    font-size:1.9rem;
     
     flex-direction: column;
     margin: 0.5rem 0rem;
@@ -41,7 +48,7 @@ section{
 }
 .signup .form-item input{
     height: 4rem;
-    width:34rem;
+    width:44rem;
     padding: 0.5rem 0.10rem;
     background: transparent;
     outline: none;
@@ -52,6 +59,7 @@ section{
     color: black;
     width: 100%;
     height: 4rem;
+    font-size: 1.9rem;
     border: none;
     outline: none;
     cursor: pointer;
@@ -65,13 +73,14 @@ html{
 }
 @media(max-width:998px){
     html{
-        font-size: 55%;
+        font-size:45%;
     }
-
 }
-@media(max-width:768px){
+@media(max-width:448px){
     html{
-        font-size: 45%;
+        font-size:35%;
     }
-    
 }
+
+
+

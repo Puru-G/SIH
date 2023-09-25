@@ -5,8 +5,8 @@ from . import db
 from flask_login import login_required, login_user, logout_user, current_user
 from flask_mail import Mail, Message
 from website import Mail_function
-import os
 from datetime import datetime
+import uuid
 
 app=Mail_function()
 auth = Blueprint('auth', __name__)
@@ -47,7 +47,8 @@ def signup():
             login_user(new_user,remember=True)
             flash('Account Created!!',category='Success')
             return redirect(url_for('views.home'))
-    return render_template('signup.html')
+        
+    return render_template('signup.html',user=current_user)
 
 @auth.route('/logout',methods=['GET','POST'])
 @login_required
@@ -76,7 +77,7 @@ def login():
 
 
 
-    return render_template("login.html")
+    return render_template("login.html",user=current_user)
 
 
 
@@ -93,27 +94,35 @@ def contact():
         sem = request.form.get('semester')
         city =  request.form.get('city')
         state =  request.form.get('state')
-        domicile_certificate = request.files['domicile']
-        domicile_filename = domicile_certificate.filename
-        
+        # domicile_certificate = request.files['domicile']
+        # domicile_filename = domicile_certificate.filename
+        aadhar = request.form.get('aadhar')
         def check(var):
             return any(char.isdigit() for char in var)
         
-        if(check(name)):
+        if(check(name) or check(state) or check(city)):
             flash('Name contains number!!',category='error')
-        elif(len(email)<=10):
-            flash('Email is not valid!!',category='error')
+        elif(len(email)<=10 or len(college_mail)<=10):
+            flash('Email is not valid!!',category='error') 
         elif(len(phone)!=10):
             flash('Enter valid phone number!!',category='error')
+        elif(len(aadhar)!=12):
+            flash("Enter valid Aadhar Number!!!")
         else:
-            new_application = Application(name=name,gender=gender,dob=dob,email=email,phone=phone,college_mail=college_mail,eno=eno,sem=sem,city=city,state=state,domicile_certificate=domicile_certificate.read())
+            unique_code = str(uuid.uuid3(uuid.NAMESPACE_URL,aadhar))
+
+            new_application = Application(name=name,gender=gender,dob=dob,email=email,phone=phone,college_mail=college_mail,eno=eno,sem=sem,city=city,state=state,aadhar=aadhar,unique_code=unique_code)#domicile_certificate=domicile_certificate.read()
             db.session.add(new_application)
             db.session.commit()
+        
+
+
             mail=Mail(app)
             msg=Message(subject="CONGRATULATIONS It WORKS!!!!!!",sender='phoenix.12456789@gmail.com',recipients=['rohan111bhargava@gmail.com'])
-            msg.body ="Name : "+name+"\n"+"Gender : "+gender+"\n"+"DOB : "+str(dob)+"\n"+"Gmail : "+email+"\n"+"Phone : "+phone+"\n"+"College : "+college_mail+"\n"+"EnormentNo: "+eno+"\n"+"Semester: "+sem+"\n"+"State : "+state+"\n"+"City : "+city
-            
-            msg.attach("File",domicile_filename+"/pdf","pdf")
+            application_body = "Name : "+name+"\n"+"Gender : "+gender+"\n"+"DOB : "+str(dob)+"\n"+"Gmail : "+email+"\n"+"Phone : "+phone+"\n"+"College : "+college_mail+"\n"+"EnormentNo: "+eno+"\n"+"Semester: "+sem+"\n"+"State : "+state+"\n"+"City : "+city+"\n"+"Aadhar Card Number : "+aadhar
+            msg.body = application_body + "\n\n"+"Once verification is completed send below code to Student."+"\n\n"+"Code : "+unique_code
+
+            # msg.attach("File",domicile_filename+"/pdf","pdf")
             mail.send(msg)
             return render_template('under_process.html')
         
@@ -123,7 +132,19 @@ def contact():
 @auth.route('/search',methods=['GET','POST'])
 def search():
      if(request.method=="POST"):
-        return render_template('contact.html')
+        if(request.form.get('col')=="others"):
+            if(len(request.form.get("college_name"))!=0 and len(request.form.get("code"))!=0):
+                unique_code = request.form.get('code')
+                check_code = Application.query.filter_by(unique_code=unique_code).first()
+                if check_code:
+                    flash('Congratulation!!!  Now you can procced to fill the scholarship details!!',category='success')
+                    return render_template('scholarship.html')
+                else:
+                    flash('Enter Valid Code',category='error') 
+            else:
+                return render_template('contact.html')
+        else:
+            return render_template('scholarship.html')
      
      
      return render_template('searchinstitute.html')

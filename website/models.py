@@ -16,7 +16,10 @@ class Application(db.Model, UserMixin):
     sem  = db.Column(db.String(15))
     city = db.Column(db.String(150))
     state = db.Column(db.String(150))
-    domicile_certificate = db.Column(db.LargeBinary)
+    # domicile_certificate = db.Column(db.LargeBinary)
+    aadhar = db.Column(db.String(150))
+    unique_code = db.Column(db.String(150))
+    
 
 
 class User(db.Model, UserMixin):
