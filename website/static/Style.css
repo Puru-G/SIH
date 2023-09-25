@@ -15,50 +15,50 @@ body{
    background-size: cover;
 }
 .container{
-    max-width: 650px;
-    padding: 28px ;
-    margin: 0 28px;
-    border-radius: 10px;
+    max-width: 65rem;
+    padding: 2.8rem ;
+    margin: 0 2.8rem;
+    border-radius: 1.0rem;
     overflow: hidden;
     background: rgba(0,0,0,0.6);
-    box-shadow: 0 15px 20px rgba(0,0,0,0.6);
+    box-shadow: 0 1.5rem 2.0rem rgba(0,0,0,0.6);
   
 
 }
 #caste{
     width:80%;
-    height:40px;
-    border-radius: 5px;
+    height:4.0rem;
+    border-radius: 0.5rem;
 }
 #state,#col{
     width:80%;
-    height:40px;
-    border-radius: 5px;
+    height:4.0rem;
+    border-radius: 0.5rem;
 }
 h2{
-    font-size: 26px;
+    font-size: 2.6rem;
     font-weight:bold;
     text-align: left;
     color:#f0a132;
-    padding-bottom: 8px;
-    border-bottom: 1px solid silver;
+    padding-bottom: 0.8rem;
+    border-bottom: 0.1rem solid silver;
 }
 .content{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 20px 0;
+    padding: 2.0rem 0;
 
 
 }
 #search{
-    padding-left: 30px;
+    padding-left: 3.0rem;
 }
 .input-box{
     display:flex;
     flex-wrap: wrap;
     width: 50%;
-    padding-bottom: 15px;
+    padding-bottom: 1.5rem;
 }
 /* .input-box:nth-child(2n){
     /*justify-content: end;}*/
@@ -66,39 +66,39 @@ h2{
     width:95%;
     color:#f6a607 ;
     font-weight: bold;
-    margin:5px 0;
+    margin:0.5rem 0;
    
 }
 .gender-title{
-    font-size: 16px;
+    font-size: 1.6rem;
 
 
 }
 .input-box input{
-    height: 40px;
+    height: 4.0rem;
     width: 80%;
-    padding: 0px 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+    padding: 0rem 1.0rem;
+    border-radius: 0.5rem;
+    border: 0.1rem solid #ccc;
     outline:none;
 }
 .input-box option{
-    height: 40px;
+    height: 4.0rem;
     width: 95%;
-    padding: 0 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+    padding: 0 1.0rem;
+    border-radius: 0.5rem;
+    border: 0.1rem solid #ccc;
     outline:none;
 
 }
 .input-box option:is(:focus,:valid){
-    padding: 0px 20px 0 5px;
-    font-size: 14px;
+    padding: 0rem 2.0rem 0 0.5rem;
+    font-size: 1.4rem;
 }
 
 .input-box input:is(:focus,:valid){
-    padding: 0px 20px 0 5px;
-    font-size: 14px;
+    padding: 0rem 2.0rem 0 0.5rem;
+    font-size: 1.4rem;
 
 
 }
@@ -109,11 +109,11 @@ h2{
     cursor: pointer;
 }
 .alert p{
-    font-size: 14px;
+    font-size: 1.4rem;
     font-style: italic;
     color:#fff;
-    margin: 5px 0;
-    padding:10px;
+    margin: 0.5rem 0;
+    padding:1.0rem;
     line-height: 1.5;
 
 
@@ -130,17 +130,17 @@ h2{
 }
 .button-container{
 
-    margin: 15px 0;
+    margin: 1.5rem 0;
 }
 .button-container button{
     width: 100%;
-    margin-top: 10px;
-    padding: 10px;
+    margin-top: 1.0rem;
+    padding: 1.0rem;
     display: block;
-    font-size: 20px;
+    font-size: 2.0rem;
     color:#fff;
     border:none;
-    border-radius: 5px;
+    border-radius: 0.5rem;
     background-color: #f6a607;
     cursor:pointer;
     transition:0.3%;
@@ -154,13 +154,13 @@ h2{
   
     
     width: 100%;
-    margin-top: 10px;
-    padding: 10px;
+    margin-top: 1.0rem;
+    padding: 1.0rem;
     display: block;
-    font-size: 20px;
+    font-size: 2.0rem;
     color:#fff;
     border:none;
-    border-radius: 5px;
+    border-radius: 0.5rem;
     background-color: #f6a607;
     cursor:pointer;
     transition:0.3%;
@@ -178,13 +178,13 @@ h2{
 .abc button{
   
     /*width: 100%;*/
-    margin-top: 10px;
-    padding: 10px ;
+    margin-top: 1.0rem;
+    padding: 1.0rem ;
     
-    font-size: 20px;
+    font-size: 2.0rem;
     color:#fff;
     border:none;
-    border-radius: 5px;
+    border-radius: 0.5rem;
     background-color: #f6a607;
     cursor:pointer;
     transition:0.3%;
@@ -199,6 +199,10 @@ h2{
     background-color: #a16c22;
 
 }
+html{
+    font-size: 62.5%;
+}
+
    
    
   
