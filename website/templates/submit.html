@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{{url_for('static',filename='background_login.png')}}" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+    <title>Form Successfully Submit</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: linear-gradient(
+                to right,
+                #eca94c 0%,
+                #b07d1e 51%,
+                #c07d0b 100%
+            );
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+           color: white;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+           /* padding: 20px;*/
+            padding-top: 0px;
+            float:inline-end;
+            background-image: linear-gradient(
+                to right,
+                #f17f28 0%,
+                #894815 51%,
+                #6e3405 100%
+            );
+            height:50vh;
+           
+            max-width: 800px;
+            margin:20vh;
+            justify-content: center;
+            align-items: center;
+            margin-left:45vh;
+            
+        
+
+        }
+        .container2{
+            display:flex;
+            color: white;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            padding: 10px;
+            
+          
+            background-image: linear-gradient(
+                to right,
+                #f17f28 0%,
+                #894815 51%,
+                #6e3405 100%
+            );
+            text-align: center;
+            align-items: center;
+            
+           
+            max-width: 550px;
+            margin-left:15vh;
+            margin-top: 10px;
+            height:30vh;
+        }
+        h1 {
+            color: black;
+            padding-top: 30px;
+            font-size: 35px;
+        }
+        p {
+            font-size: 18px;
+        }
+        .green-color {
+            color:green;
+         
+        }
+        .tick{
+            display: inline;
+        }
+        p.a h2 {
+            font-family: "Arial, Helvetica, sans-serif";
+          }
+    </style>
+</head>
+<body>
+   
+
+    
+    
+
+    <div class="container">
+        <div class="tick">
+        <h1>Form Successfully Submit <i class="fa fa-check-circle" style="font-size:48px; color:solid yellow" ></i></h1>
+        
+        </div>
+        <div class="container2">
+            <p>You will receive an email/notification regarding your scholarship request in  just few days.</p>
+            <img src="{{url_for('static',filename='Inbox.jpg')}}" alt="">
+    
+        </div> 
+        
+    </div>
+    
+    </section>
+    <div class="thanks">
+        <p class="a"><h2>Thank you for Visiting us!</h2></p>
+    </div>
+    <div class="copyright">
+        &copy; All rights reserved by Phoenix
+    </div>
+</body>
+</html>
