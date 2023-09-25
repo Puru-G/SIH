@@ -10,6 +10,9 @@ body{
     justify-content: center;
     align-items: center;
     height: 100vh;
+   
+
+    
 
    background: url(./back1.png);
    background-size: cover;
@@ -59,12 +62,14 @@ h2{
     flex-wrap: wrap;
     width: 50%;
     padding-bottom: 1.5rem;
+
 }
 /* .input-box:nth-child(2n){
     /*justify-content: end;}*/
 .input-box label, .gender-title{
     width:95%;
     color:#f6a607 ;
+    font-size:2rem;
     font-weight: bold;
     margin:0.5rem 0;
    
@@ -167,13 +172,16 @@ h2{
    
 }
 #button{
-    display: flex;
+    display: block;
     align-items: center;
-    margin-left: 83vh;
-    
+    justify-content: center;
+    margin-left: 50vh;
+    width: 30%;
 }
 #procced{
-    margin-right: 52vh;
+    width: 60%;
+    margin-right: 30vh;
+    margin-left: 8vh;
 }
 .abc button{
   
@@ -203,6 +211,33 @@ html{
     font-size: 62.5%;
 }
 
+
+    
+
+.drop-container {
+   
+    padding: 10px;
+    
+    
+    color: #444;
+    cursor: pointer;
+    width:5%;
+    
+   
+  }
+  
+  .drop-container:hover {
+  
+    border-color:rgb(202, 139, 2);
+  }
+  
+  .drop-container:hover .drop-title {
+    color: #222;
+  }
+  .Uploaddocs{
+    display:flex;
+
+  }
    
    
   
