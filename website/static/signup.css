@@ -84,3 +84,19 @@ html{
 
 
 
+nav .brand a{
+    color: rgb(197, 123, 25);
+    text-decoration: none;
+    font-size: 3.8rem;
+    font-weight: bold;
+}
+ 
+nav ul li{
+    font-size: 1.8rem;
+}
+.copyright{
+    text-align: center;
+    background-color: dimgrey;
+    padding: 10px;
+    font-size: 1.25rem;
+}
