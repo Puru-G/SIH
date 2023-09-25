@@ -25,7 +25,7 @@
 
     <section>
         <nav>
-            <div class="brand">
+            <div class="brand" id="brand1">
                 <img src="{{url_for('static',filename='background_login.png')}}" alt="icon_of_the_website">  <!--if the icon is not load it shows this-->
                 <a href="/">Scholarship potal</a>
             </div>
@@ -63,7 +63,7 @@
               </div>
             {% endif %} {% endfor %} {% endif %} {% endwith %}
 
-
+        <div class="up">
         <div class="signup">
             <h1>Sign up</h1>
             <form  method="POST" action="/signup">
@@ -106,6 +106,7 @@
                 <button type="submit">Sign up</button>
             </form>
         </div>
+    </div>
     </section>
     <div class="copyright"> 
         &copy; All rights reserved by Phoenix
