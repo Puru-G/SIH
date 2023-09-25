@@ -139,7 +139,9 @@ section{
     height: 40px;
     margin: 5px 0;
 }
-
+*{
+    font-family: 'Times New Roman', Times, serif;
+}
 
 
 

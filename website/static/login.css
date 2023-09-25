@@ -57,3 +57,6 @@ section{
 .login form button:hover{
     background-color: rgb(230, 135, 46);
 }
+*{
+    font-family: 'Times New Roman', Times, serif;
+}
