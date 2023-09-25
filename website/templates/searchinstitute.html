@@ -39,8 +39,8 @@
             <div class="input-box">
                 <label for="state">Select State :</label>
          
-                <select id="state" name="state" onchange="check(this.id,'col')">
-                   <option value="state">States</option> 
+                <select id="state" name="state" onchange="check(this.id,'col')" required>
+                   <option value="state" disabled selected>States</option> 
                   <option value="Andhra_pradesh">Andhra Pradesh</option>
                   <option value="Arunachal_pradesh">Arunachal Pradesh</option>
                   <option value="Assam">Assam</option>
@@ -80,9 +80,9 @@
             <div class="input-box">
                 <label for="col">Institution</label>
 
-                <select id="col" name="col" onchange="redirect(this.id)">
+                <select id="col" name="col" onchange="redirect(this.id)" required>
                 
-                    <option value="college">Colleges</option>
+                    <option value="college" disabled selected>Colleges</option>
                     <!-- <option value="">KREA University, Sri City</option>
                     <option value="">Andhra Loyola College, Vijaywada</option>
                     <option value="">KL University, Guntur</option>
@@ -173,7 +173,7 @@
    
     <input type="text " placeholder="University/College Name"  name="college_name" id="college_name" style="visibility: hidden;"></br></br>
     </div><div class="input-box" >
-    <input type="file" name="college_name" id="document" style="visibility: hidden;"></div>
+    <input type="Text" name="code" id="document" style="visibility: hidden;" placeholder="Enter the code"></div>
     </div>
 
     <br>

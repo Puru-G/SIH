@@ -93,27 +93,29 @@ def contact():
         sem = request.form.get('semester')
         city =  request.form.get('city')
         state =  request.form.get('state')
-        domicile_certificate = request.files['domicile']
-        domicile_filename = domicile_certificate.filename
-        
+        # domicile_certificate = request.files['domicile']
+        # domicile_filename = domicile_certificate.filename
+        aadhar = request.form.get('aadhar')
         def check(var):
             return any(char.isdigit() for char in var)
         
-        if(check(name)):
+        if(check(name) or check(state) or check(city)):
             flash('Name contains number!!',category='error')
-        elif(len(email)<=10):
-            flash('Email is not valid!!',category='error')
+        elif(len(email)<=10 or len(college_mail)<=10):
+            flash('Email is not valid!!',category='error') 
         elif(len(phone)!=10):
             flash('Enter valid phone number!!',category='error')
+        elif(len(aadhar)!=12):
+            flash("Enter valid Aadhar Number!!!")
         else:
-            new_application = Application(name=name,gender=gender,dob=dob,email=email,phone=phone,college_mail=college_mail,eno=eno,sem=sem,city=city,state=state,domicile_certificate=domicile_certificate.read())
+            new_application = Application(name=name,gender=gender,dob=dob,email=email,phone=phone,college_mail=college_mail,eno=eno,sem=sem,city=city,state=state,aadhar=aadhar)#domicile_certificate=domicile_certificate.read()
             db.session.add(new_application)
             db.session.commit()
             mail=Mail(app)
             msg=Message(subject="CONGRATULATIONS It WORKS!!!!!!",sender='phoenix.12456789@gmail.com',recipients=['rohan111bhargava@gmail.com'])
-            msg.body ="Name : "+name+"\n"+"Gender : "+gender+"\n"+"DOB : "+str(dob)+"\n"+"Gmail : "+email+"\n"+"Phone : "+phone+"\n"+"College : "+college_mail+"\n"+"EnormentNo: "+eno+"\n"+"Semester: "+sem+"\n"+"State : "+state+"\n"+"City : "+city
+            msg.body ="Name : "+name+"\n"+"Gender : "+gender+"\n"+"DOB : "+str(dob)+"\n"+"Gmail : "+email+"\n"+"Phone : "+phone+"\n"+"College : "+college_mail+"\n"+"EnormentNo: "+eno+"\n"+"Semester: "+sem+"\n"+"State : "+state+"\n"+"City : "+city+"\n"+"Aadhar Card Number : "+aadhar
             
-            msg.attach("File",domicile_filename+"/pdf","pdf")
+            # msg.attach("File",domicile_filename+"/pdf","pdf")
             mail.send(msg)
             return render_template('under_process.html')
         
@@ -123,7 +125,13 @@ def contact():
 @auth.route('/search',methods=['GET','POST'])
 def search():
      if(request.method=="POST"):
-        return render_template('contact.html')
+        if(request.form.get('col')=="others"):
+            if(len(request.form.get("college_name"))!=0 and len(request.form.get("code"))!=0):
+                return render_template('scholarship.html')
+            else:
+                return render_template('contact.html')
+        else:
+            return render_template('scholarship.html')
      
      
      return render_template('searchinstitute.html')
