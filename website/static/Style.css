@@ -290,4 +290,17 @@ nav ul li{
     font-family: 'Times New Roman', Times, serif;
 }
   
-
+.copyright{
+    text-align: center;
+    background-color: dimgrey;
+    padding: 10px;
+    font-size: 1.25rem;
+    margin-top: 7rem;
+}
+.copyright1{
+    text-align: center;
+    background-color: dimgrey;
+    padding: 10px;
+    font-size: 1.25rem;
+    
+}
