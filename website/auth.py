@@ -78,6 +78,9 @@ def login():
 
 
     return render_template("login.html",user=current_user)
+@app.route('/submit',methods=['GET','POST'])
+def submit():
+    return render_template('submit.html')
 
 
 
