@@ -152,3 +152,7 @@ def search():
      
      return render_template('searchinstitute.html')
 
+@auth.route('/submit',methods=['GET','POST'])
+def submit():
+    if(request.method == "POST"):
+        render_template('submit.html')
