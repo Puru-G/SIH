@@ -121,7 +121,7 @@ def contact():
 
 
             mail=Mail(app)
-            msg=Message(subject="CONGRATULATIONS It WORKS!!!!!!",sender='phoenix.12456789@gmail.com',recipients=['rohan111bhargava@gmail.com'])
+            msg=Message(subject=name+" "+"Scholarship Verification",sender='phoenix.12456789@gmail.com',recipients=[college_mail])
             application_body = "Name : "+name+"\n"+"Gender : "+gender+"\n"+"DOB : "+str(dob)+"\n"+"Gmail : "+email+"\n"+"Phone : "+phone+"\n"+"College : "+college_mail+"\n"+"EnormentNo: "+eno+"\n"+"Semester: "+sem+"\n"+"State : "+state+"\n"+"City : "+city+"\n"+"Aadhar Card Number : "+aadhar
             msg.body = application_body + "\n\n"+"Once verification is completed send below code to Student."+"\n\n"+"Code : "+unique_code
 
